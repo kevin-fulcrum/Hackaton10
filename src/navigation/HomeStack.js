@@ -13,9 +13,8 @@ const forFade =({current})=>({
 });
 const HomeStack = () =>{
     return(
-        <NavigationContainer>
         <Stack.Navigator
-        initialRouteName="welcome" 
+        initialRouteName="Welcome" 
         screenOptions={{cardStyleInterpolator:forFade,}}>
             <Stack.Screen
             name="Welcome"
@@ -30,10 +29,12 @@ const HomeStack = () =>{
             <Stack.Screen
             name="Detalle"
             component={Detalle}
-            options={{header: () => null}}
+            options={({route}) => ({
+                title: route.params.title,
+                headerBackTitle: '',
+              })}
             />
         </Stack.Navigator>
-        </NavigationContainer>
     )
 }
 

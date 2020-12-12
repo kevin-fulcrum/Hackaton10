@@ -68,7 +68,7 @@ const Detalle =({navigation, route})=>{
         <View style={styles.containerEnd}>
             <Button label='Add to cart'></Button>
         </View>
-        <Footer></Footer>
+        <Footer navigation={navigation}></Footer>
         </SafeAreaView>
         </>
     )

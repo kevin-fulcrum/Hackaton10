@@ -1,10 +1,9 @@
 import React from 'react';
-import HomeStack from './src/navigation/HomeStack'
-import Welcome from './src/screens/welcome/Welcome';
+import DrawerStack from './src/navigation/DrawerStack'
 
 const App = () =>  {
   return (
-    <HomeStack></HomeStack>
+    <DrawerStack></DrawerStack>
   );
 };
 
