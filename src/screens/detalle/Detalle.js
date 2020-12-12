@@ -45,7 +45,7 @@ const Detalle =({navigation, route})=>{
         <SafeAreaView style={styles.safeArea}>
         <View style={styles.container}>
             <Text style={{color: '#ffffff', fontSize: 20}}>{route.params.title}</Text>
-            <Text style={{color: '#c0bb65', fontWeight: 'bold', fontSize: 25, marginTop: 5}}>$15,00</Text>
+            <Text style={{color: '#c0bb65', fontWeight: 'bold', fontSize: 25, marginTop: 5}}>{route.params.price}</Text>
         </View>
         <View style={styles.containerDos}>
             <View>
@@ -68,7 +68,7 @@ const Detalle =({navigation, route})=>{
         <View style={styles.containerEnd}>
             <Button label='Add to cart'></Button>
         </View>
-        <Footer></Footer>
+        <Footer navigation={navigation}></Footer>
         </SafeAreaView>
         </>
     )
