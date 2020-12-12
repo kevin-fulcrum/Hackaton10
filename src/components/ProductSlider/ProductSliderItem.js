@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     margin: 10,
     marginTop:width/8,
     left: 5,
-    right:width/2.3,
+    right:width/2.5,
   },
   image: {
     width: width /2,

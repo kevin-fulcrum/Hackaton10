@@ -32,10 +32,10 @@ const styles = StyleSheet.create({
   },
 });
 
-const RecSliderItem = ({item}) => {
+const RecSliderItem = ({item, onPress}) => {
   return (
     <View style={styles.container}>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={onPress}>
         <Image
           style={styles.image}
           source={{

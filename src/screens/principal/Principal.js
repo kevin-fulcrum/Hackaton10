@@ -5,15 +5,16 @@ import ProductSlider from '../../components/ProductSlider/ProductSlider'
 import RecSlider from '../../components/RecomSlider/RecSlider'
 import {ProductData} from '../../resource/data/ProductData'
 import {RecommendData} from '../../resource/data/RecommendData'
+import Footer from '../../components/footer/Footer'
 
 const windowHeight = Dimensions.get('window').height;
 
 const styles = StyleSheet.create({
     container: { flex: 1, height: windowHeight, alignContent: 'center' , justifyContent: 'center', flexDirection:'column', marginHorizontal:10 },
-    header: { height: windowHeight/15, justifyContent: 'flex-end',  flexDirection: 'row'},
+    header: { height: windowHeight/15, justifyContent: 'flex-end',  flexDirection: 'row', marginTop:40},
     button: { height: windowHeight/10, flexDirection: 'row'},
-    cont1: { height: windowHeight/3},
-    cont2: { height: windowHeight/4},
+    cont1: { height: windowHeight/3, marginBottom: 35},
+    cont2: { height: windowHeight/4, marginBottom: 40},
     footer: { height: windowHeight/15},
     title: {fontWeight: 'bold'},
     subtitle: { fontSize: 16, fontWeight: 'bold'},
@@ -40,7 +41,7 @@ const Principal = () =>{
                 <RecSlider data={RecommendData}></RecSlider>
             </View>
             <View style = {styles.footer}>
-                
+                <Footer></Footer>
             </View>
         </View>
     )

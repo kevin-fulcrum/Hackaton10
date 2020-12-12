@@ -21,6 +21,10 @@ const styles = StyleSheet.create({
 const RecSlider = ({data}) => {
   const scrollX = new Animated.Value(0);
 
+  const productDetail = (item) => {
+    navigation.navigate('ProductDetails', item);
+  };
+
   if (data && data.length) {
     return (
       <View style={{flex: 1}}>
@@ -34,7 +38,7 @@ const RecSlider = ({data}) => {
           decelerationRate="fast"
           showsHorizontalScrollIndicator={false}
           renderItem={(item) => {
-            return <RecSliderItem item={item.item} />;
+            return <RecSliderItem item={item.item} onPress={() => productDetail(item.item)} />;
           }}
           onScroll={Animated.event([
             {nativeEvent: {contentOffset: {x: scrollX}}},
