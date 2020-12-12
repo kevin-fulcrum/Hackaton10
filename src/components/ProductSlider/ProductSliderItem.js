@@ -27,9 +27,9 @@ const styles = StyleSheet.create({
   textView: {
     position: 'absolute',
     margin: 10,
+    marginTop:width/8,
     left: 5,
-    right:width/2,
-    backgroundColor: 'blue'
+    right:width/2.3,
   },
   image: {
     width: width /2,
@@ -50,11 +50,9 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   itemDescription: {
-    color: 'white',
-    fontSize: 12,
-    shadowColor: '#000000',
-    shadowOffset: {width: 0.8, height: 0.8},
-    shadowOpacity: 1,
+    color: 'black',
+    fontSize: 15,
+    shadowOpacity: 0.2,
     shadowRadius: 3,
     marginBottom: 5,
     elevation: 5,

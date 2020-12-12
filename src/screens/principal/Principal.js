@@ -2,7 +2,9 @@ import React from 'react'
 import {View, Text, StyleSheet, Dimensions} from 'react-native'
 import Button from '../../../src/components/button/Button1'
 import ProductSlider from '../../components/ProductSlider/ProductSlider'
+import RecSlider from '../../components/RecomSlider/RecSlider'
 import {ProductData} from '../../resource/data/ProductData'
+import {RecommendData} from '../../resource/data/RecommendData'
 
 const windowHeight = Dimensions.get('window').height;
 
@@ -35,10 +37,10 @@ const Principal = () =>{
             </View>
             <View style = {styles.cont2}>
                 <Text style = {styles.subtitle}>Recommendation</Text>
-
+                <RecSlider data={RecommendData}></RecSlider>
             </View>
             <View style = {styles.footer}>
-                <Text>Recommendation</Text>
+                
             </View>
         </View>
     )

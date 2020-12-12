@@ -1,46 +1,25 @@
 export const ProductData = [
     {
-        title: 'Panino Vesubio',
+        title: 'Caffè Latte',
         description:
-          'café preparado a base de café espresso y leche al vapor.',
+          'Half Price Wednesday 50% OFF Promotion (every Wednesday).',
         image:
           'https://images.rappi.pe/products/143796-1598296121411.png?d=128x90&e=webp',
         id: 1,
       },
       {
-        title: 'Dress',
-        description: 'Woman in a summer dress',
+        title: 'Iced Chocolate',
+        description: 'Half Price Monday 25% OFF Promotion (every Monday).',
         image:
-          'https://images.unsplash.com/photo-1562373353-7db88744f982?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=896&q=80',
+          'https://mcdonalds.com.au/sites/mcdonalds.com.au/files/Product_thumb_Frappe-Chocolate.png',
         id: 2,
       },
       {
-        title: 'Shoes',
-        description: 'Woman in a dress',
+        title: 'Frappè Cappuccino',
+        description: 'Half Price Sunday 30% OFF Promotion (every Sunday).',
         image:
-          'https://images.unsplash.com/photo-1600075110701-6ea93b9b5f70?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+          'https://i.pinimg.com/originals/77/54/66/7754662cf5407b0e334122e6a30a4413.png',
         id: 3,
-      },
-      {
-        title: 'T-Shirt',
-        description: ' beautiful woman in a dress.',
-        image:
-          'https://images.unsplash.com/photo-1586471176822-f1beeaa03fe4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
-        id: 4,
-      },
-      {
-        title: 'Hoddies',
-        description: ' beautiful woman in a dress.',
-        image:
-          'https://images.unsplash.com/photo-1586471176822-f1beeaa03fe4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
-        id: 5,
-      },
-      {
-        title: 'Underwear',
-        description: ' beautiful woman in a dress.',
-        image:
-          'https://images.unsplash.com/photo-1586471176822-f1beeaa03fe4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
-        id: 6,
       },
   ];
   
