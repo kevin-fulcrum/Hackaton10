@@ -41,7 +41,7 @@ const Principal = ({navigation}) =>{
                 <RecSlider navigation={navigation} data={RecommendData}></RecSlider>
             </View>
             <View style = {styles.footer}>
-                <Footer></Footer>
+            <Footer navigation={navigation}></Footer>
             </View>
         </View>
     )
