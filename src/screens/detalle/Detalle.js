@@ -38,12 +38,13 @@ const styles = StyleSheet.create({
     },
 });
 
-const Detalle =()=>{
+const Detalle =({navigation, route})=>{
+  console.warn("route: ",route.params)
     return(
         <>
         <SafeAreaView style={styles.safeArea}>
         <View style={styles.container}>
-            <Text style={{color: '#ffffff', fontSize: 20}}>Americano Coffe</Text>
+            <Text style={{color: '#ffffff', fontSize: 20}}>{route.params.title}</Text>
             <Text style={{color: '#c0bb65', fontWeight: 'bold', fontSize: 25, marginTop: 5}}>$15,00</Text>
         </View>
         <View style={styles.containerDos}>
@@ -55,7 +56,7 @@ const Detalle =()=>{
             <View>
                 <Image
                 source={{
-                uri: 'https://assets.stickpng.com/thumbs/580b57fbd9996e24bc43c0e8.png',
+                uri: route.params.image,
                 }}
                 style={styles.image}> 
                 </Image>

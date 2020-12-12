@@ -18,11 +18,11 @@ const styles = StyleSheet.create({
   },
 });
 
-const RecSlider = ({data}) => {
+const RecSlider = ({navigation, data}) => {
   const scrollX = new Animated.Value(0);
 
   const productDetail = (item) => {
-    navigation.navigate('ProductDetails', item);
+    navigation.navigate('Detalle', item);
   };
 
   if (data && data.length) {

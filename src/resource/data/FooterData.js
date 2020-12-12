@@ -1,11 +1,11 @@
 export const footerData = [
     {
-      navigation: 'Dashboard',
+      navigation: 'Principal',
       image: require('../static/images/icons/house.png'),
       title: 'Home',
     },
     {
-      navigation: 'Locations',
+      navigation: 'Welcome',
       image: require('../static/images/icons/logout.png'),
       title: 'Salir',
     },

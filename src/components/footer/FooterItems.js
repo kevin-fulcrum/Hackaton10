@@ -12,7 +12,7 @@ import {
   windowHeight,
 } from '../../resource/functions/Dimensions';
 
-const FooterItems = ({footerData}) => {
+const FooterItems = ({footerData, navigation}) => {
   const styles = StyleSheet.create({
     title: {
       color: '#212121',
@@ -31,15 +31,12 @@ const FooterItems = ({footerData}) => {
     },
   });
 
-  const onPressMenuFooter = (route) => {
-    if (route === 'Dashboard') {
-      DeviceEventEmitter.emit('eventDashboard', true);
+  const onPressFooter = (route) => {
+    if (route === 'Principal') {
+      DeviceEventEmitter.emit('eventPrincipal', true);
     }
-    if (route === 'ShoppingCart') {
-      DeviceEventEmitter.emit('eventShoppingCart', true);
-    }
-    if (route === 'Locations') {
-      DeviceEventEmitter.emit('eventLocations', true);
+    if (route === 'Welcome') {
+      DeviceEventEmitter.emit('eventWelcome', true);
     }
     navigation.navigate(route);
   };
@@ -48,7 +45,7 @@ const FooterItems = ({footerData}) => {
     <>
       {footerData.map((i) => (
         <View key={i.length} style={styles.buttonFooter}>
-          <TouchableOpacity onPress={() => onPressMenuFooter(i.navigation)}>
+          <TouchableOpacity onPress={() => onPressFooter(i.navigation)}>
             <Image style={styles.image} source={i.image} />
             <Text style={styles.title}>{i.title}</Text>
           </TouchableOpacity>

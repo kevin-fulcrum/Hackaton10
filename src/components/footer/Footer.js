@@ -1,3 +1,4 @@
+import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
 import {
   View,
@@ -24,11 +25,12 @@ const styles = StyleSheet.create({
     paddingBottom: 0,
   },
 });
-const Footer = () => {
+const Footer = ({navigation}) => {
   return (
     <View style={styles.box}>
       <FooterItems
         footerData={footerData}
+        navigation={navigation}
       />
     </View>
   );

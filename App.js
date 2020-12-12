@@ -1,11 +1,10 @@
 import React from 'react';
-//import Welcome from './src/screens/welcome/Welcome'
-//import Detalle from './src/screens/detalle/Detalle'
-import Principal from './src/screens/principal/Principal'
+import HomeStack from './src/navigation/HomeStack'
+import Welcome from './src/screens/welcome/Welcome';
 
 const App = () =>  {
   return (
-      <Principal/>
+    <HomeStack></HomeStack>
   );
 };
 

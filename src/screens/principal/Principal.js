@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     subtitle: { fontSize: 16, fontWeight: 'bold'},
 })
 
-const Principal = () =>{
+const Principal = ({navigation}) =>{
     return(
         <View style={styles.container}>
             <View style = {styles.header}>
@@ -38,7 +38,7 @@ const Principal = () =>{
             </View>
             <View style = {styles.cont2}>
                 <Text style = {styles.subtitle}>Recommendation</Text>
-                <RecSlider data={RecommendData}></RecSlider>
+                <RecSlider navigation={navigation} data={RecommendData}></RecSlider>
             </View>
             <View style = {styles.footer}>
                 <Footer></Footer>
