@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     header: { height: windowHeight/15, justifyContent: 'flex-end',  flexDirection: 'row', marginTop:40},
     button: { height: windowHeight/10, flexDirection: 'row'},
     cont1: { height: windowHeight/3, marginBottom: 35},
-    cont2: { height: windowHeight/4, marginBottom: 40},
+    cont2: { height: windowHeight/3.5, marginBottom: 40},
     footer: { height: windowHeight/15},
     title: {fontWeight: 'bold'},
     subtitle: { fontSize: 16, fontWeight: 'bold'},

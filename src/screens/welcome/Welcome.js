@@ -33,9 +33,9 @@ const Welcome =({navigation})=>{
             style={styles.image}> 
             </Image>
         </View>
-        <TouchableOpacity style={styles.containerEnd} onPress={()=>{navigation.navigate('Principal')}}>
-            <Button label='INGRESAR'></Button>
-        </TouchableOpacity>
+        <View style={styles.containerEnd}>
+            <Button label='INGRESAR' onPress={()=>{navigation.navigate('Principal')}} ></Button>
+        </View>
         </>
     )
 }

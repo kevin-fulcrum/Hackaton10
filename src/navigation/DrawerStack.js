@@ -10,11 +10,11 @@ const DrawerStack = () => {
   return ( 
     <NavigationContainer>
     <Drawer.Navigator
-      initialRouteName='Welcome'
+      initialRouteName='WelcomeStack'
       drawerContent={(parameters) => <MenuDrawer {...parameters} />
       }>
       <Drawer.Screen
-        name="Welcome"
+        name="WelcomeStack"
         component={HomeStack}
       />
     </Drawer.Navigator>

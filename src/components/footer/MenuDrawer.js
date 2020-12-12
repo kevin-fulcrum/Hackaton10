@@ -32,6 +32,7 @@ const MenuDrawer = (props) => {
             )}
             label="Principal"
             onPress={() => {
+                console.warn('holaaaaaaaaaaaa')
               props.navigation.navigate('Principal');
             }}
           />

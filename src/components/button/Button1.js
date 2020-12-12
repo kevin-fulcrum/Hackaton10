@@ -10,13 +10,13 @@ const styles = StyleSheet.create({
     height: 50,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'darkblue',
+    backgroundColor: '#d2d9d3',
     marginRight: 10
   },
   label: {
     fontSize: 15,
     textAlign: 'center',
-    color: 'white'
+    color: 'black'
   },
 });
 
