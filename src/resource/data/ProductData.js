@@ -2,7 +2,7 @@ export const ProductData = [
     {
         title: 'Panino Vesubio',
         description:
-          'Corfu is absolutely romantic and calm in the evenings, especially next to the sea. Few days ago me and my husband Pete had a chance to spend an hour in Corfu Town when sun was going down and day was slowly moving to its end. It was absolutely charming and beautiful.',
+          'café preparado a base de café espresso y leche al vapor.',
         image:
           'https://images.rappi.pe/products/143796-1598296121411.png?d=128x90&e=webp',
         id: 1,
