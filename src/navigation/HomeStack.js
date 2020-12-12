@@ -15,7 +15,7 @@ const HomeStack = () =>{
     return(
         <NavigationContainer>
         <Stack.Navigator
-        initialRouteName="Principal" 
+        initialRouteName="welcome" 
         screenOptions={{cardStyleInterpolator:forFade,}}>
             <Stack.Screen
             name="Welcome"
@@ -32,7 +32,7 @@ const HomeStack = () =>{
             component={Detalle}
             options={{header: () => null}}
             />
-            </Stack.Navigator>
+        </Stack.Navigator>
         </NavigationContainer>
     )
 }
