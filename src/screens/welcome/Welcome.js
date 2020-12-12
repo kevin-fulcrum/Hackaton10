@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, Image , StyleSheet, Dimensions, ImageBackground} from 'react-native'
+import { View, Text, Image , StyleSheet, Dimensions, ImageBackground, TouchableOpacity} from 'react-native'
 import Button from '../../components/button/Button';
 
 const {width, height} = Dimensions.get('window');
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     },
 });
 
-const Welcome =()=>{
+const Welcome =({navigation})=>{
     return(
         <>
         <View style={styles.container}>
@@ -33,9 +33,9 @@ const Welcome =()=>{
             style={styles.image}> 
             </Image>
         </View>
-        <View style={styles.containerEnd}>
-            <Button></Button>
-        </View>
+        <TouchableOpacity style={styles.containerEnd} onPress={()=>{console.warn(navigation.navigate('Principal'))}}>
+            <Button label='INGRESAR'></Button>
+        </TouchableOpacity>
         </>
     )
 }

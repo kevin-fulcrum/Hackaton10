@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   Image,
   DeviceEventEmitter,
+  SafeAreaView,
 } from 'react-native';
 import {
   windowWidth,

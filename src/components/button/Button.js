@@ -18,7 +18,7 @@ const Button =({label})=>{
     return(
         <>
         <View style={styles.button}>
-    <Text style={styles.text}>{label}</Text>
+          <Text style={styles.text}>{label}</Text>
         </View>
         </>
     )
