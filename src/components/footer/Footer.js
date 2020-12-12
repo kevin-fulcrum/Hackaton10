@@ -1,25 +1,37 @@
-import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import React from 'react';
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  Image,
+  DeviceEventEmitter,
+} from 'react-native';
+import {
+  windowWidth,
+  windowHeight,
+} from '../../resource/functions/Dimensions';
+import {footerData} from '../../resource/data/FooterData';
+import FooterItems from '../footer/FooterItems';
 
 const styles = StyleSheet.create({
-    footer: {
-      backgroundColor: '#d2d9d3',
-      flex: 0.1
-    },
-    text: {
-      color: '#2c5c49',
-      fontWeight: 'bold',
-    },
+  box: {
+    display: 'flex',
+    flexDirection: 'row',
+    borderTopWidth: 1,
+    borderTopColor: '#DADADA',
+    backgroundColor: '#F9f9f9',
+    paddingBottom: 0,
+  },
 });
-
-const Footer =()=>{
-    return(
-        <>
-        <View style={styles.footer}>
-            <Text style={styles.text}>Footer</Text>
-        </View>
-        </>
-    )
-}
+const Footer = () => {
+  return (
+    <View style={styles.box}>
+      <FooterItems
+        footerData={footerData}
+      />
+    </View>
+  );
+};
 
 export default Footer;
