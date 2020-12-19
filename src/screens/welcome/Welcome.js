@@ -34,7 +34,7 @@ const Welcome =({navigation})=>{
             </Image>
         </View>
         <View style={styles.containerEnd}>
-            <Button label='INGRESAR' onPress={()=>{navigation.navigate('Principal')}} ></Button>
+            <Button label='INGRESAR' onPress={()=>{navigation.navigate('Map')}} ></Button>
         </View>
         </>
     )

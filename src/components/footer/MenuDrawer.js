@@ -48,6 +48,30 @@ const MenuDrawer = (props) => {
                 props.navigation.navigate('Welcome');
               }}
           />
+          <DrawerItem
+            icon={() => (
+              <Image
+                style={styles.image}
+                source={require('../../resource/static/images/icons/avatar.png')}
+              />
+            )}
+            label="Map"
+            onPress={() => {
+                props.navigation.navigate('Map');
+              }}
+          />
+          <DrawerItem
+            icon={() => (
+              <Image
+                style={styles.image}
+                source={require('../../resource/static/images/icons/avatar.png')}
+              />
+            )}
+            label="Gallery"
+            onPress={() => {
+                props.navigation.navigate('Gallery');
+              }}
+          />
         </View>
       </DrawerContentScrollView>
     </View>
