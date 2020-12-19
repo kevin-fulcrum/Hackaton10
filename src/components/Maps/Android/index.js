@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
   maps: {...StyleSheet.absoluteFillObject},
 });
 
-const GoogleMaps = () => {
+const GoogleMaps = ({latiudRes, longitudRes}) => {
   const [location, setLocation] = useState();
   useEffect(() => {
     console.warn('useEffect');
@@ -22,22 +22,31 @@ const GoogleMaps = () => {
         PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
       );
     }
-
     Geolocation.getCurrentPosition(
+      
       (position) => {
         console.warn('position', position);
+        console.log('ssss', longitudRes)
         const {latitude, longitude} = position.coords;
-        setLocation({
-          latitude,
-          longitude,
-        });
+        if (latiudRes === '' && longitudRes === ''){
+          setLocation({
+            "latitude" : latitude,
+            "longitude" : longitude
+          });
+        }
+        else{
+          setLocation({
+            "latitude" : latiudRes,
+            "longitude" : longitudRes
+          });
+        }
       },
       (error) => {
         console.warn(error.code, error.message);
       },
       {enableHighAccuracy: true, timeout: 15000, maximumAge: 10000},
     );
-  }, []);
+  }, [latiudRes, longitudRes]);
   return (
     <>
       {location && (
