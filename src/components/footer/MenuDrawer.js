@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet, Image} from 'react-native';
+import {View, StyleSheet, Image, Text} from 'react-native';
 import {DrawerContentScrollView, DrawerItem} from '@react-navigation/drawer';
 const styles = StyleSheet.create({
   container: {
@@ -23,6 +23,7 @@ const MenuDrawer = (props) => {
       <DrawerContentScrollView {...props}>
         <View style={styles.contentDrawer}>
           <View style={styles.userInfo} />
+          <Text>HACKATON 10</Text>
           <DrawerItem
             icon={() => (
               <Image
@@ -32,7 +33,6 @@ const MenuDrawer = (props) => {
             )}
             label="Principal"
             onPress={() => {
-                console.warn('holaaaaaaaaaaaa')
               props.navigation.navigate('Principal');
             }}
           />
@@ -48,6 +48,7 @@ const MenuDrawer = (props) => {
                 props.navigation.navigate('Welcome');
               }}
           />
+          <Text>HACKATON 11</Text>
           <DrawerItem
             icon={() => (
               <Image

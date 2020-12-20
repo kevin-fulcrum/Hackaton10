@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import {StyleSheet, Platform, PermissionsAndroid} from 'react-native';
 import MapView, {PROVIDER_GOOGLE, Marker} from 'react-native-maps';
 import Geolocation from 'react-native-geolocation-service';
@@ -12,8 +12,8 @@ const styles = StyleSheet.create({
 
 const GoogleMaps = ({latiudRes, longitudRes}) => {
   const [location, setLocation] = useState();
+  const reference = useRef(null);
   useEffect(() => {
-    console.warn('useEffect');
     if (Platform.OS === 'ios') {
       Geolocation.requestAuthorization('always');
     }
@@ -26,20 +26,33 @@ const GoogleMaps = ({latiudRes, longitudRes}) => {
       
       (position) => {
         console.warn('position', position);
-        console.log('ssss', longitudRes)
         const {latitude, longitude} = position.coords;
-        if (latiudRes === '' && longitudRes === ''){
-          setLocation({
+
+        if(latiudRes===undefined) {
+        setLocation({
             "latitude" : latitude,
             "longitude" : longitude
           });
-        }
-        else{
-          setLocation({
+          reference.current.animateToRegion({
+            latitude : latitude,
+            longitude : longitude,
+            latitudeDelta: 0.0922,
+            longitudeDelta: 0.0421,
+          })    
+        console.warn('location1', location)  
+        }else{
+        setLocation({
             "latitude" : latiudRes,
             "longitude" : longitudRes
           });
-        }
+          reference.current.animateToRegion({
+            latitude : latiudRes,
+            longitude : longitudRes,
+            latitudeDelta: 0.0922,
+            longitudeDelta: 0.0421,
+          })  
+          console.warn('location2', location.latitude)  
+        }  
       },
       (error) => {
         console.warn(error.code, error.message);
@@ -51,6 +64,7 @@ const GoogleMaps = ({latiudRes, longitudRes}) => {
     <>
       {location && (
         <MapView
+          ref={reference}
           provider={PROVIDER_GOOGLE}
           style={styles.maps}
           initialRegion={{
